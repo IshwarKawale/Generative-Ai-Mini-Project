@@ -1,0 +1,118 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Reset and body styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f8ff, #d1ecf1);
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease;
+}
+
+/* Container styling with shadow and hover effect */
+.container {
+  width: 90%;
+  max-width: 600px;
+  background: white;
+  border-radius: 25px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Input fields with focus effect */
+input {
+  width: 80%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 10px rgba(0,120,255,0.2);
+}
+
+/* Button styling with gradient and hover animation */
+button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border: none;
+  background: linear-gradient(135deg, #0078ff, #00c6ff);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,120,255,0.3);
+}
+
+/* Result display with smooth animation */
+#result {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease;
+}
+
+#result.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image card styling with shadow and hover effect */
+#cardImage {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cardImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+  .container {
+    padding: 30px 20px;
+  }
+  
+  input {
+    width: 90%;
+  }
+
+  button {
+    width: 80%;
+  }
+}
